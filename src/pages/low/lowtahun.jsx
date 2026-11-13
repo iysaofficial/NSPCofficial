@@ -17,15 +17,15 @@ function Lowtahun() {
             <h1>Pilih berdasarkan tahun acara yang Anda ikuti</h1>
           </div>
           <div className="content-button mt-4">
-            <a href="/kategori26" className="btn btn-action btn-lg">
-              2026
+            <a href="#" className="btn btn-action btn-lg">
+              Coming Soon 2027
             </a>
-            <a href="/kategori25" className="btn btn-action btn-lg">
+            {/* <a href="/kategori25" className="btn btn-action btn-lg">
               2025
             </a>
             <a href="/kategori24" className="btn btn-action btn-lg">
               2024
-            </a>
+            </a> */}
           </div>
         </div>
       </section>
