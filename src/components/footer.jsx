@@ -2,34 +2,34 @@ import "../assets/css/styles.css";
 import { useEffect } from "react";
 const Footer = () => {
   useEffect(() => {
-      const scriptURL =
+    const scriptURL =
       "https://script.google.com/macros/s/AKfycbwfw1dAhzyY6p6crVCCuoEXzb_E7hBOi8cYuIBu_-JZzz2a25h-tCvT6Xd3dUH9Mx2fQA/exec";
 
-      const form = document.forms.namedItem("footer-newsletter");
+    const form = document.forms.namedItem("footer-newsletter");
 
-      if (form) {
+    if (form) {
       const handleSubmit = async (e) => {
-          e.preventDefault();
-          try {
+        e.preventDefault();
+        try {
           await fetch(scriptURL, {
-              method: "POST",
-              body: new FormData(form),
+            method: "POST",
+            body: new FormData(form),
           });
-          alert("Data sent successfully!");
+          alert("Data berhasil dikirim!");
           form.reset();
-          } catch (error) {
+        } catch (error) {
           console.error("Error:", error);
-          alert("Failed to send data.");
-          }
+          alert("Gagal mengirim data.");
+        }
       };
 
       form.addEventListener("submit", handleSubmit);
 
       // cleanup listener
       return () => {
-          form.removeEventListener("submit", handleSubmit);
+        form.removeEventListener("submit", handleSubmit);
       };
-      }
+    }
   }, []);
 
   return (
@@ -49,13 +49,13 @@ const Footer = () => {
                     <input
                       type="email"
                       className="form-control rounded-left"
-                      placeholder="Enter email address"
+                      placeholder="Masukkan alamat email"
                       required
                       name="Email"
                     />
                     <input
                       type="submit"
-                      value="Subscribe"
+                      value="Berlangganan"
                       className="form-control submit px-3"
                     />
                   </div>
@@ -67,28 +67,28 @@ const Footer = () => {
             <div className="col-lg-3 col-md-6 col-sm-6">
               <div className="footer-area-content">
                 <img
-                  src="./assets/logo/ISPC LOGO.png"
+                  src="./assets/logo/NSPC LOGO.png"
                   alt="logo"
                   className="main-logo"
                 />
                 <p className="mb-2">
-                  The International Science Project Competition (ISPC) is an
-                  international science competition organized by the Indonesian
-                  Young Scientist Association (IYSA). This competition aims to
-                  foster interest and motivation in science among the young
-                  generation worldwide.
+                  National Science Project Competition (NSPC) adalah kompetisi
+                  sains internasional yang diselenggarakan oleh Indonesian Young
+                  Scientist Association (IYSA). Kompetisi ini bertujuan untuk
+                  menumbuhkan minat dan motivasi di bidang sains di kalangan
+                  generasi muda di seluruh dunia.
                 </p>
               </div>
             </div>
 
             <div className="col-lg-3 col-md-6 col-sm-6 mt-3 mt-lg-0">
               <div className="single-footer-widget">
-                <h5>Information Link</h5>
+                <h5>Tautan Informasi</h5>
 
                 <ul className="footer-quick-links list-unstyled">
                   <li>
                     <a href="https://iysa.or.id" target="_blank">
-                      Our Main Website
+                      Situs Web Utama Kami
                     </a>
                   </li>
                   <li>
@@ -96,17 +96,17 @@ const Footer = () => {
                       href="https://drive.google.com/drive/folders/14Niucp6WAqmeQqTFTdt5A3NW98jsafKz?usp=sharing"
                       target="_blank"
                     >
-                      Latest Event Documentation
+                      Dokumentasi Acara Terbaru
                     </a>
                   </li>
-                  {/* <li><a href="https://registration-ispc.vercel.app/" target="_blank">Registration Here</a></li> */}
+                  {/* <li><a href="https://registration-ISPC.vercel.app/" target="_blank">Pendaftaran di Sini</a></li> */}
                 </ul>
               </div>
             </div>
 
             <div className="col-lg-3 col-md-6 col-sm-6">
               <div className="single-footer-widget">
-                <h5>Information About Us</h5>
+                <h5>Informasi Tentang Kami</h5>
 
                 <ul className="footer-quick-links address-link list-unstyled">
                   <li>
@@ -116,9 +116,9 @@ const Footer = () => {
                     </a>
                   </li>
                   <li>
-                    <a href="mailto:ispc.iysa@gmail.com">
+                    <a href="mailto:NSPC.iysa@gmail.com">
                       <i className="fa fa-envelope me-1"></i>
-                      ispc.iysa@gmail.com
+                      NSPC.iysa@gmail.com
                     </a>
                   </li>
                   <li>
@@ -132,7 +132,7 @@ const Footer = () => {
             </div>
             <div className="col-lg-3 col-md-6 col-sm-6">
               <div className="single-footer-widget">
-                <h5>Subscribe to Our Social Media</h5>
+                <h5>Ikuti Media Sosial Kami</h5>
                 <ul className="footer-quick-links sosmed list-unstyled">
                   <li>
                     <a
@@ -178,7 +178,7 @@ const Footer = () => {
             <div className="row align-items-center">
               <p className="text-center">
                 <i className="far fa-copyright me-1"></i>
-                2024 ISPC Official. All Rights Reserved
+                2024 NSPC Official. Hak Cipta Dilindungi Undang-Undang
               </p>
             </div>
           </div>

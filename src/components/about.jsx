@@ -1,31 +1,44 @@
 function About() {
-
-    return (
-        <>
-        <section id="about" className="about-section ">
-            <div className="container row mx-auto">
-                <h1 className="text-center mb-3">About ISPC</h1>
-                <div className="content-img col-lg-6 col-12 text-center">
-                    <img src="./assets/logo/ISPC LOGO.png" className="img-fluid" alt="" />
-                </div>
-                <div className="content-text col-lg-6 col-12">
-                    <p className="mb-2">
-                        The International Science Project Competition (ISPC) is an international science competition organized by the Indonesian Young Scientist Association (IYSA). This competition aims to foster interest and motivation in science among the young generation worldwide.
-                    </p>
-                    {/* <p className="mb-2">
-                        The International Science Project Competition (ISPC) is an international science competition organized through a collaboration between the Indonesian Young Scientist Association (IYSA) and Universitas Muhammadiyah Malang (UMM). This competition aims to foster interest and motivation in science among the young generation worldwide.
+  return (
+    <>
+      <section id="about" className="about-section ">
+        <div className="container row mx-auto">
+          <h1 className="text-center mb-3">Tentang NSPC</h1>
+          <div className="content-img col-lg-6 col-12 text-center">
+            <img
+              src="./assets/logo/NSPC LOGO.png"
+              className="img-fluid"
+              alt=""
+            />
+          </div>
+          <div className="content-text col-lg-6 col-12">
+            <p className="mb-2">
+              National Science Project Competition (NSPC) adalah kompetisi sains
+              internasional yang diselenggarakan oleh Indonesian Young Scientist
+              Association (IYSA). Kompetisi ini bertujuan untuk menumbuhkan
+              minat dan motivasi di bidang sains di kalangan generasi muda di
+              seluruh dunia.
+            </p>
+            {/* <p className="mb-2">
+                        National Science Project Competition (NSPC) adalah kompetisi sains internasional yang diselenggarakan melalui kolaborasi antara Indonesian Young Scientist Association (IYSA) dan Universitas Muhammadiyah Malang (UMM). Kompetisi ini bertujuan untuk menumbuhkan minat dan motivasi di bidang sains di kalangan generasi muda di seluruh dunia.
                     </p> */}
-                    <p className="mb-2">
-                        ISPC is expected to contribute to improving the quality of science education in Indonesia and globally. The competition will encourage students to be more motivated to learn science and develop their potential.
-                    </p>
-                    <p className="mb-2">
-                        ISPC also aims to strengthen international collaboration in science.The competition will bring together students from various countries and provide them with an opportunity to exchange ideas and experiences.
-                    </p>
-                </div>
-            </div>
-        </section>
-        </>
-    )
-  }
-  
-  export default About
+            <p className="mb-2">
+              NSPC diharapkan dapat berkontribusi dalam meningkatkan kualitas
+              pendidikan sains di Indonesia maupun secara global. Kompetisi ini
+              akan mendorong para pelajar untuk lebih termotivasi dalam
+              mempelajari sains dan mengembangkan potensi mereka.
+            </p>
+            <p className="mb-2">
+              NSPC juga bertujuan untuk memperkuat kolaborasi internasional di
+              bidang sains. Kompetisi ini akan mempertemukan para pelajar dari
+              berbagai negara dan memberikan mereka kesempatan untuk bertukar
+              ide serta pengalaman.
+            </p>
+          </div>
+        </div>
+      </section>
+    </>
+  );
+}
+
+export default About;

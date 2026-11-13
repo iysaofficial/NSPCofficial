@@ -1,35 +1,42 @@
 export const indonesiaOnlineTerms = (
   <>
     <h5>
-      Before proceeding, please read and agree to the following terms &
-      conditions for Online Participants:
+      Sebelum melanjutkan, harap baca dan setujui syarat &amp; ketentuan berikut
+      untuk Peserta Online:
     </h5>
     <ul>
       <li>
-        Please be advised that all data submitted by participants cannot be modified after the payment deadline has passed. In this regard participants are required to carefully review their Letter of Acceptance (LoA) and registration information upon submission to ensure the accuracy, completeness, and correctness of all details provided.
+        Harap diperhatikan bahwa seluruh data yang telah dikirimkan oleh peserta
+        tidak dapat diubah setelah batas waktu pembayaran berakhir. Sehubungan
+        dengan hal tersebut, peserta wajib memeriksa dengan teliti Letter of
+        Acceptance (LoA) dan informasi pendaftaran saat pengumpulan untuk
+        memastikan keakuratan, kelengkapan, dan kebenaran seluruh detail yang
+        diberikan.
       </li>
       <li>
-        Participants who do not submit the required documents (full paper, PowerPoint) after two reminders will be considered to have
-        withdrawn automatically.
+        Peserta yang tidak mengumpulkan dokumen yang dipersyaratkan (makalah
+        lengkap/full paper, PowerPoint) setelah dua kali pengingat akan dianggap
+        mengundurkan diri secara otomatis.
       </li>
       <li>
-        Participants must use a title and full paper that match the
-        selected category. (International participants must use English for all
-        required documents.)
+        Peserta wajib menggunakan judul dan makalah lengkap (full paper) yang
+        sesuai dengan kategori yang dipilih. (Peserta internasional wajib
+        menggunakan bahasa Inggris untuk seluruh dokumen yang dipersyaratkan.)
       </li>
       <li>
-        The committee’s decision on this matter is final and cannot be
-        contested.
+        Keputusan panitia terkait hal ini bersifat mutlak dan tidak dapat
+        diganggu gugat.
       </li>
     </ul>
     <p className="text-align">
-      Additionally, we inform you that each event will be registered for
-      curation by SIM T Puspresnas.
+      Selain itu, kami menginformasikan bahwa setiap acara akan didaftarkan
+      untuk kurasi oleh SIM T Puspresnas.
     </p>
     <p className="text-align">
-      However, the curation results are fully under the authority of Puspresnas
-      and cannot be contested by any party. Therefore, we do not accept
-      objections or complaints regarding the results determined by Puspresnas.
+      Namun, hasil kurasi sepenuhnya merupakan wewenang Puspresnas dan tidak
+      dapat diganggu gugat oleh pihak mana pun. Oleh karena itu, kami tidak
+      menerima keberatan maupun keluhan terkait hasil yang ditetapkan oleh
+      Puspresnas.
     </p>
   </>
 );
@@ -37,120 +44,138 @@ export const indonesiaOnlineTerms = (
 export const indonesiaOfflineTerms = (
   <>
     <h5>
-      Before proceeding, please read and agree to the following terms &
-      conditions for Offline Participants:
+      Sebelum melanjutkan, harap baca dan setujui syarat &amp; ketentuan berikut
+      untuk Peserta Offline:
     </h5>
     <ul>
       <li>
-        Please be advised that all data submitted by participants cannot be modified after the payment deadline has passed. In this regard participants are required to carefully review their Letter of Acceptance (LoA) and registration information upon submission to ensure the accuracy, completeness, and correctness of all details provided.
+        Harap diperhatikan bahwa seluruh data yang telah dikirimkan oleh peserta
+        tidak dapat diubah setelah batas waktu pembayaran berakhir. Sehubungan
+        dengan hal tersebut, peserta wajib memeriksa dengan teliti Letter of
+        Acceptance (LoA) dan informasi pendaftaran saat pengumpulan untuk
+        memastikan keakuratan, kelengkapan, dan kebenaran seluruh detail yang
+        diberikan.
       </li>
       <li>
-        Participants who do not submit the required documents (full paper, poster) after two reminders will be considered to have
-        withdrawn automatically.
+        Peserta yang tidak mengumpulkan dokumen yang dipersyaratkan (makalah
+        lengkap/full paper, poster) setelah dua kali pengingat akan dianggap
+        mengundurkan diri secara otomatis.
       </li>
       <li>
-        Participants must use a title and full paper that match the
-        selected category. (International participants must use English for all
-        requirements.)
+        Peserta wajib menggunakan judul dan makalah lengkap (full paper) yang
+        sesuai dengan kategori yang dipilih. (Peserta internasional wajib
+        menggunakan bahasa Inggris untuk seluruh persyaratan.)
       </li>
       <li>
-        Participants are required to create a poster in A0 size, bring their
-        product, and also provide a paper/full paper (in hard copy)
-        during the judging session.
+        Peserta wajib membuat poster berukuran A0, membawa produk, serta
+        menyediakan makalah/full paper (dalam bentuk cetak/hard copy) pada saat
+        sesi penjurian.
       </li>
       <li>
-        Awards will be presented to participants according to the sequence set
-        in the event schedule (participants are not allowed to request their
-        award before their turn).
+        Pemberian penghargaan kepada peserta akan dilakukan sesuai urutan yang
+        telah ditetapkan dalam susunan acara (peserta tidak diperkenankan
+        meminta penghargaan sebelum gilirannya).
       </li>
       <li>
-        Participants are required to attend the entire event series according to
-        the schedule prepared by the organizing committee.
+        Peserta wajib mengikuti seluruh rangkaian acara sesuai dengan jadwal
+        yang telah disusun oleh panitia penyelenggara.
       </li>
       <li>
-        For offline participants eligible for awards such as Best Booth, Best
-        Poster, Best Presentation, Best Project, cash prizes, Semi Grand Award,
-        and Grand Award but are unable to attend the awarding ceremony, the
-        respective prize will be forfeited.
+        Bagi peserta offline yang berhak atas penghargaan seperti Best Booth,
+        Best Poster, Best Presentation, Best Project, hadiah uang tunai, Semi
+        Grand Award, dan Grand Award namun berhalangan hadir pada acara
+        penganugerahan, maka hadiah yang bersangkutan dinyatakan hangus.
       </li>
       <li>
-        The committee’s decision on this matter is final and cannot be
-        contested.
+        Keputusan panitia terkait hal ini bersifat mutlak dan tidak dapat
+        diganggu gugat.
       </li>
     </ul>
     <p className="text-align">
-      Additionally, we inform you that each event will be registered for
-      curation by SIM T Puspresnas.
+      Selain itu, kami menginformasikan bahwa setiap acara akan didaftarkan
+      untuk kurasi oleh SIM T Puspresnas.
     </p>
     <p className="text-align">
-      However, the curation results are fully under the authority of Puspresnas
-      and cannot be contested by any party. Therefore, we do not accept
-      objections or complaints regarding the results determined by Puspresnas.
+      Namun, hasil kurasi sepenuhnya merupakan wewenang Puspresnas dan tidak
+      dapat diganggu gugat oleh pihak mana pun. Oleh karena itu, kami tidak
+      menerima keberatan maupun keluhan terkait hasil yang ditetapkan oleh
+      Puspresnas.
     </p>
   </>
 );
 
 export const internationalOnlineTerms = (
   <>
-    <h3 className="text-2xl">Online Participants:</h3>
+    <h3 className="text-2xl">Peserta Online:</h3>
     <li>
-      Please be advised that all data submitted by participants cannot be modified after the payment deadline has passed. In this regard participants are required to carefully review their Letter of Acceptance (LoA) and registration information upon submission to ensure the accuracy, completeness, and correctness of all details provided.
+      Harap diperhatikan bahwa seluruh data yang telah dikirimkan oleh peserta
+      tidak dapat diubah setelah batas waktu pembayaran berakhir. Sehubungan
+      dengan hal tersebut, peserta wajib memeriksa dengan teliti Letter of
+      Acceptance (LoA) dan informasi pendaftaran saat pengumpulan untuk
+      memastikan keakuratan, kelengkapan, dan kebenaran seluruh detail yang
+      diberikan.
     </li>
     <li>
-      Participants who do not submit the required documents (full paper,
-      PowerPoint) after two reminders will be considered to have resigned
-      automatically.
+      Peserta yang tidak mengumpulkan dokumen yang dipersyaratkan (makalah
+      lengkap/full paper, PowerPoint) setelah dua kali pengingat akan dianggap
+      mengundurkan diri secara otomatis.
     </li>
     <li>
-      Participants must use the title and full paper in accordance with
-      the category they are participating in. (International participants must
-      use English for all required documents)
+      Peserta wajib menggunakan judul dan makalah lengkap (full paper) yang
+      sesuai dengan kategori yang diikuti. (Peserta internasional wajib
+      menggunakan bahasa Inggris untuk seluruh dokumen yang dipersyaratkan)
     </li>
     <li>
-      The committee&apos;s decision regarding this matter is final and cannot be
-      contested.
+      Keputusan panitia terkait hal ini bersifat mutlak dan tidak dapat
+      diganggu gugat.
     </li>
   </>
 );
 
 export const internationalOfflineTerms = (
   <>
-    <h3 className="text-2xl">Offline Participants:</h3>
+    <h3 className="text-2xl">Peserta Offline:</h3>
     <li>
-      Please be advised that all data submitted by participants cannot be modified after the payment deadline has passed. In this regard participants are required to carefully review their Letter of Acceptance (LoA) and registration information upon submission to ensure the accuracy, completeness, and correctness of all details provided.
+      Harap diperhatikan bahwa seluruh data yang telah dikirimkan oleh peserta
+      tidak dapat diubah setelah batas waktu pembayaran berakhir. Sehubungan
+      dengan hal tersebut, peserta wajib memeriksa dengan teliti Letter of
+      Acceptance (LoA) dan informasi pendaftaran saat pengumpulan untuk
+      memastikan keakuratan, kelengkapan, dan kebenaran seluruh detail yang
+      diberikan.
     </li>
     <li>
-      Participants who do not submit the required files (full paper,
-      poster) after two reminders will be considered automatically resigned.
+      Peserta yang tidak mengumpulkan berkas yang dipersyaratkan (makalah
+      lengkap/full paper, poster) setelah dua kali pengingat akan dianggap
+      mengundurkan diri secara otomatis.
     </li>
     <li>
-      Participants must use titles and full paper that are in accordance
-      with the category they are participating in. (International participants
-      must use English for all requirements)
+      Peserta wajib menggunakan judul dan makalah lengkap (full paper) yang
+      sesuai dengan kategori yang diikuti. (Peserta internasional wajib
+      menggunakan bahasa Inggris untuk seluruh persyaratan)
     </li>
     <li>
-      Participants are required to make an A0-sized poster, bring the product
-      and also the paper/full paper (in hard copy) during the judging
-      session.
+      Peserta wajib membuat poster berukuran A0, membawa produk, serta
+      menyediakan makalah/full paper (dalam bentuk cetak/hard copy) pada saat
+      sesi penjurian.
     </li>
     <li>
-      The awarding of awards to participants will be carried out in accordance
-      with the order set out in the schedule of events (participants are not
-      allowed to request awards before their turn).
+      Pemberian penghargaan kepada peserta akan dilakukan sesuai urutan yang
+      telah ditetapkan dalam susunan acara (peserta tidak diperkenankan meminta
+      penghargaan sebelum gilirannya).
     </li>
     <li>
-      Participants are required to follow the entire series of activities in
-      accordance with the schedule prepared by the organizing committee.
+      Peserta wajib mengikuti seluruh rangkaian kegiatan sesuai dengan jadwal
+      yang telah disusun oleh panitia penyelenggara.
     </li>
     <li>
-      For offline participants who are entitled to the Best booth, Best Poster,
-      Best Presentation, Best Project, cash prize, semi grand award, and grand
-      award prizes but cannot attend the prize distribution ceremony, the prizes
-      concerned will be declared forfeited.
+      Bagi peserta offline yang berhak atas hadiah Best Booth, Best Poster,
+      Best Presentation, Best Project, hadiah uang tunai, Semi Grand Award, dan
+      Grand Award namun tidak dapat menghadiri acara penyerahan hadiah, maka
+      hadiah yang bersangkutan dinyatakan hangus.
     </li>
     <li>
-      The committee&apos;s decision regarding this matter is final and cannot be
-      contested.
+      Keputusan panitia terkait hal ini bersifat mutlak dan tidak dapat
+      diganggu gugat.
     </li>
   </>
 );

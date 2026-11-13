@@ -5,33 +5,33 @@ function MainHero() {
         <div className="mainhero-wrapper">
           <div className="first-content">
             {/* <div className="image-content col-12 col-lg-6">
-                        <img src="./assets/img/ISPC LOGO.png" alt="" />
+                        <img src="./assets/logo/NSPC LOGO.png" alt="" />
                     </div> */}
             <div className="text-content ">
-              {/* <h1>OPEN REGISTRATION FOR 2026 PARTICIPANTS</h1> */}
-              {/* <h1>COMING SOON</h1> */}
-              <h1>COMING SOON 2027</h1>
+              {/* <h1>PENDAFTARAN DIBUKA UNTUK PESERTA 2026</h1> */}
+              {/* <h1>SEGERA HADIR</h1> */}
+              <h1>SEGERA HADIR 2027</h1>
               <p className="mx-auto">
-                International Science Project Competition (ISPC) It's a stage
-                for innovators, researchers, and young thinkers from around the
-                globe, as well as educators, professors, and researchers from
-                various fields. Explore categories like Social Science,
-                Innovative Science, Environmental Science, and Engineering,
-                including dedicated sections tailored for the public such as
-                Education and Classroom Action Research. Showcase your ideas,
-                gain recognition, and contribute to the future of science.
+                National Science Project Competition (NSPC) adalah panggung bagi
+                para inovator, peneliti, dan pemikir muda dari seluruh dunia,
+                serta pendidik, dosen, dan peneliti dari berbagai bidang.
+                Jelajahi berbagai kategori seperti Social Sciences, Innovative
+                Sciences, Environmental Sciences, and Engineering., termasuk
+                kategori khusus untuk umum seperti Pendidikan dan Penelitian
+                Tindakan Kelas. Tampilkan ide Anda, raih pengakuan, dan
+                berkontribusilah bagi masa depan sains.
               </p>
               {/* <p className="mx-auto">
-                            Welcome to the International Science Project Competition (ISPC) It's a stage for innovators, researchers, and young thinkers from around the globe, as well as educators, professors, and researchers from various fields. Explore categories like Social Science, Innovative Science, Environmental Science, and Engineering, including dedicated sections tailored for the public such as Education and Classroom Action Research. Showcase your ideas, gain recognition, and contribute to the future of science. Register now!
+                            Selamat datang di National Science Project Competition (NSPC), panggung bagi para inovator, peneliti, dan pemikir muda dari seluruh dunia, serta pendidik, dosen, dan peneliti dari berbagai bidang. Jelajahi berbagai kategori seperti Ilmu Sosial, Sains Inovatif, Ilmu Lingkungan, dan Teknik, termasuk kategori khusus untuk umum seperti Pendidikan dan Penelitian Tindakan Kelas. Tampilkan ide Anda, raih pengakuan, dan berkontribusilah bagi masa depan sains. Daftar sekarang!
                         </p> */}
             </div>
           </div>
           <div className="second-content text-center">
             <a className="btn btn-action" href="#!">
-              Coming Soon 2027
+              Segera Hadir 2027
             </a>
-            {/* <a className="btn btn-action" href="/homeregist">Registration</a> */}
-            {/* <a className="btn btn-action" href="https://drive.google.com/drive/folders/1ojJCV0eBDz5xfujIpR41g0RhsMmOsTZ_?usp=sharing" target="_blank">Guide Book</a> */}
+            {/* <a className="btn btn-action" href="/homeregist">Pendaftaran</a> */}
+            {/* <a className="btn btn-action" href="https://drive.google.com/drive/folders/1ojJCV0eBDz5xfujIpR41g0RhsMmOsTZ_?usp=sharing" target="_blank">Buku Panduan</a> */}
           </div>
         </div>
       </section>

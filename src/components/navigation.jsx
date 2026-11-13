@@ -23,7 +23,7 @@ const navigation = () => {
     <section>
       <nav className="navbar navbar-expand-lg navbar-light bg-dark fixed-top">
         <div className="container">
-          <img src="./assets/logo/ISPC LOGO.png" width="100" />
+          <img src="./assets/logo/NSPC LOGO.png" width="100" />
           <button
             className="navbar-toggler"
             type="button"
@@ -41,10 +41,13 @@ const navigation = () => {
           >
             <div className="navbar-nav">
               <a className="nav-item nav-link" href="/">
-                Home
+                Beranda
               </a>
-              <NavDropdown title="Guide Book" id="nav-dropdown">
-                <NavDropdown.Item
+              <NavDropdown title="Buku Panduan" id="nav-dropdown">
+                <NavDropdown.Item eventKey="5.1" href="#">
+                  2027
+                </NavDropdown.Item>
+                {/* <NavDropdown.Item
                   eventKey="5.1"
                   href="https://drive.google.com/file/d/1Hfm8rpV7fx4ZGi_O0ByZ2H1M52vAxasx/view?usp=sharing"
                 >
@@ -61,35 +64,38 @@ const navigation = () => {
                   href="https://drive.google.com/file/d/1STnLOXA-9nVlKTTcp9WZ-mY3bjoWDbVA/view?usp=sharing"
                 >
                   2024
-                </NavDropdown.Item>
+                </NavDropdown.Item> */}
               </NavDropdown>
               <a className="nav-item nav-link" href="/lowtahun">
-                List of Winners
+                Daftar Pemenang
               </a>
-              <NavDropdown title="Certificate" id="nav-dropdown">
-                <NavDropdown.Item
-                  eventKey="2.1"
-                  href="/cert2026"
-                >
-                  Certificate Supervisor 2026
+              <NavDropdown title="Sertifikat" id="nav-dropdown">
+                <NavDropdown.Item eventKey="2.1" href="#">
+                  Sertifikat Pembimbing 2027
+                </NavDropdown.Item>
+                {/* <NavDropdown.Item eventKey="2.1" href="/cert2026">
+                  Sertifikat Pembimbing 2026
                 </NavDropdown.Item>
                 <NavDropdown.Item
                   eventKey="2.1"
                   href="https://drive.google.com/drive/folders/1168Gqp_t-une_HfMMhlB8A4tvlbcdxwZ?usp=sharing"
                   target="_blank"
                 >
-                  Certificate Supervisor 2025
+                  Sertifikat Pembimbing 2025
                 </NavDropdown.Item>
                 <NavDropdown.Item
                   eventKey="2.1"
                   href="https://drive.google.com/drive/folders/1OdGfiXdOXx2UTBY4GflTv9rcH8CO6F0q?usp=sharing"
                   target="_blank"
                 >
-                  Certificate Supervisor 2024
-                </NavDropdown.Item>
+                  Sertifikat Pembimbing 2024
+                </NavDropdown.Item> */}
               </NavDropdown>
-              <NavDropdown title="Gallery" id="nav-dropdown">
-                <NavDropdown.Item
+              <NavDropdown title="Galeri" id="nav-dropdown">
+                <NavDropdown.Item eventKey="3.1" href="#" target="_blank">
+                  2027
+                </NavDropdown.Item>
+                {/* <NavDropdown.Item
                   eventKey="3.1"
                   href="https://drive.google.com/drive/folders/12VSzP_kKDEKMGqZf8J5TOTmPFc4pMv6i?usp=sharing"
                   target="_blank"
@@ -109,62 +115,66 @@ const navigation = () => {
                   target="_blank"
                 >
                   2024
-                </NavDropdown.Item>
+                </NavDropdown.Item> */}
               </NavDropdown>
               <NavDropdown title="Media" id="nav-dropdown">
-                <NavDropdown.Item
-                  eventKey="4.1"
-                  href="/listnews"
-                >
-                  News from Media
+                <NavDropdown.Item eventKey="4.1" href="#">
+                  Berita dari Media
                 </NavDropdown.Item>
-                <NavDropdown.Item
+                {/* <NavDropdown.Item
                   eventKey="4.1"
                   href="https://drive.google.com/file/d/1bsNac2XmMuUgIoC79u0N8cBlOUuz-2r5/view?usp=sharing"
                   target="_blank"
                 >
-                  Press Release 2026
+                  Siaran Pers 2026
                 </NavDropdown.Item>
                 <NavDropdown.Item
                   eventKey="4.1"
                   href="https://drive.google.com/file/d/115ioYB9Yi-oLTRBO2GysgJIoxS_mgI5u/view?usp=sharing"
                   target="_blank"
                 >
-                  Press Release 2025
+                  Siaran Pers 2025
                 </NavDropdown.Item>
                 <NavDropdown.Item
                   eventKey="4.1"
                   href="https://drive.google.com/file/d/1SXsbmmALUxxsOeSF_dyqSBxIxivy2Th8/view?usp=sharing"
                   target="_blank"
                 >
-                  Press Release 2024
-                </NavDropdown.Item>
+                  Siaran Pers 2024
+                </NavDropdown.Item> */}
               </NavDropdown>
-              <NavDropdown title="Curation" id="nav-dropdown">
+              <NavDropdown title="Kurasi" id="nav-dropdown">
                 <NavDropdown.Item
                   eventKey="4.2"
                   href="https://drive.google.com/drive/folders/1B9L97RoyZlqLXIm_Arsq-m0eDatwI6l-?usp=sharing"
                   target="_blank"
                 >
-                  Curation 2026
+                  Kurasi 2027
+                </NavDropdown.Item>
+                {/* <NavDropdown.Item
+                  eventKey="4.2"
+                  href="https://drive.google.com/drive/folders/1B9L97RoyZlqLXIm_Arsq-m0eDatwI6l-?usp=sharing"
+                  target="_blank"
+                >
+                  Kurasi 2026
                 </NavDropdown.Item>
                 <NavDropdown.Item
                   eventKey="4.2"
                   href="https://drive.google.com/drive/folders/1-3IagOtB_ebgDPgR05Agt3v1ogYUa9Xm?usp=sharing"
                   target="_blank"
                 >
-                  Curation 2025
+                  Kurasi 2025
                 </NavDropdown.Item>
                 <NavDropdown.Item
                   eventKey="4.1"
                   href="https://drive.google.com/drive/folders/1wKdfpoiYnZFSHBtfCtPtdosKWrD0xVaD?usp=drive_link"
                   target="_blank"
                 >
-                  Curation 2024
-                </NavDropdown.Item>
-              </NavDropdown>  
+                  Kurasi 2024
+                </NavDropdown.Item> */}
+              </NavDropdown>
               <a className="nav-item nav-link" href="/contact">
-                Contact{" "}
+                Kontak{" "}
               </a>
               <a className="nav-item nav-link" href="/faq">
                 FAQ{" "}

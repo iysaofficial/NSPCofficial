@@ -11,10 +11,10 @@ function HomeRegist() {
           <div className="wrapper">
             <div className="text-center">
               <h1 className="mx-auto text-sm md:text-lg lg:text-5xl">
-                REGISTRATION FORM
+                FORMULIR PENDAFTARAN
               </h1>
               <h3 className="mx-auto mt-5 mb-2 text-sm md:text-lg lg:text-2xl">
-                Choose Categories Participant for Registration ISPC 2026
+                Pilih Kategori Peserta untuk Pendaftaran ISPC 2026
               </h3>
             </div>
           </div>
@@ -23,20 +23,20 @@ function HomeRegist() {
               href="#!"
               className="btn-regist btn-action text-center me-lg-5 m-2"
             >
-              Coming Soon <i className="fa-solid fa-earth-americas"></i>
+              Segera Hadir <i className="fa-solid fa-earth-americas"></i>
             </a>
             {/* <a href="/homeindo" className="btn-regist btn-action text-center me-lg-5 m-2">
-              Indonesia Participant{" "}
+              Peserta Indonesia{" "}
               <i className="fa-solid fa-earth-americas"></i>
             </a> */}
             <a
               href="#!"
               className="btn-regist btn-action text-center me-lg-5 m-2"
             >
-              Coming Soon <i className="fa-solid fa-earth-americas"></i>
+              Segera Hadir <i className="fa-solid fa-earth-americas"></i>
             </a>
             {/* <a href="/homeinter" className="btn-regist btn-action text-center me-lg-5 m-2">
-              International Participant{" "}
+              Peserta Internasional{" "}
               <i className="fa-solid fa-earth-americas"></i>
             </a> */}
           </div>

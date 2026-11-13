@@ -7,14 +7,14 @@ function Lowtahun() {
       <Navigation />
       {/* PAGE HEADER START */}
       <div className="page-header text-center">
-        <h1>List of Winners</h1>
-        <a href="/">Home</a>
+        <h1>Daftar Pemenang</h1>
+        <a href="/">Beranda</a>
       </div>
       {/* PAGE HEADER END */}
       <section className="low-section">
         <div className="text-center">
           <div className="content-title">
-            <h1>Select by the year of the event you are participating in</h1>
+            <h1>Pilih berdasarkan tahun acara yang Anda ikuti</h1>
           </div>
           <div className="content-button mt-4">
             <a href="/kategori26" className="btn btn-action btn-lg">

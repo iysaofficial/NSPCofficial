@@ -5,35 +5,35 @@ function Thankyouinter() {
   const location = useLocation();
   const searchParams = new URLSearchParams(location.search);
 
-  const fullName = searchParams.get("namaLengkap") || "No data available";
-  const projectTitle = searchParams.get("projectTitle") || "No data available";
-  const category = searchParams.get("category") || "No data available";
-  const schoolName = searchParams.get("namasekolah") || "No data available";
+  const fullName = searchParams.get("namaLengkap") || "Data tidak tersedia";
+  const projectTitle = searchParams.get("projectTitle") || "Data tidak tersedia";
+  const category = searchParams.get("category") || "Data tidak tersedia";
+  const schoolName = searchParams.get("namasekolah") || "Data tidak tersedia";
 
   return (
     <section className="thankyou">
       <div className="wrapper">
-        <h1>Thank You for Registering!</h1>
+        <h1>Terima Kasih Telah Mendaftar!</h1>
         <p>
-          We appreciate your participation and look forward to your engagement.
+          Kami menghargai partisipasi Anda dan menantikan keterlibatan Anda.
         </p>
 
         <table className="thankyou-table">
           <tbody>
             <tr>
-              <td><strong>Team Member</strong></td>
+              <td><strong>Anggota Tim</strong></td>
               <td>{fullName}</td>
             </tr>
             <tr>
-              <td><strong>School Name</strong></td>
+              <td><strong>Nama Sekolah</strong></td>
               <td>{schoolName}</td>
             </tr>
             <tr>
-              <td><strong>Project Title</strong></td>
+              <td><strong>Judul Proyek</strong></td>
               <td>{projectTitle}</td>
             </tr>
             <tr>
-              <td><strong>Competition Category</strong></td>
+              <td><strong>Kategori Kompetisi</strong></td>
               <td>{category}</td>
             </tr>
           </tbody>
@@ -41,11 +41,11 @@ function Thankyouinter() {
 
         <p>
           <strong>
-            *If the data appears, take a screenshot of this page as proof of successful registration.
+            *Jika data muncul, tangkap layar halaman ini sebagai bukti pendaftaran berhasil.
           </strong>
         </p>
         <a href="/homeregist" className="btn btn-action">
-          Back to Registration Menu
+          Kembali ke Menu Pendaftaran
         </a>
       </div>
     </section>

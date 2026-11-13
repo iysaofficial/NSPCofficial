@@ -1,8 +1,36 @@
 :root {
-  --warna-primary: #0b8be3;
-  --warna-sekunder: #293e92;
-  --warna-tulisan: #fff;
-  --warna-tulisan2: #212529;
+  --warna-primary: #0297DE;
+  --warna-sekunder: #02070A;
+  --warna-tulisan: #FCFFFF;
+  --warna-tulisan2: #02070A;
+  --fluted-beams: repeating-linear-gradient(
+    90deg,
+    rgba(252, 255, 255, 0.06) 0px,
+    rgba(252, 255, 255, 0.06) 1px,
+    transparent 1px,
+    transparent 6px,
+    rgba(2, 7, 10, 0.35) 6px,
+    rgba(2, 7, 10, 0.35) 9px
+  );
+  --gradasi-utama: var(--fluted-beams),
+    radial-gradient(
+      ellipse 55% 55% at 50% 80%,
+      #FCFFFF 0%,
+      #8ee5ff 25%,
+      #0297DE 55%,
+      rgba(2, 151, 222, 0.25) 80%,
+      transparent 100%
+    ),
+    radial-gradient(
+      ellipse 105% 85% at 50% 95%,
+      #0297DE 0%,
+      #026aa7 45%,
+      #012a4a 70%,
+      #02070A 95%
+    ),
+    #02070A;
+  --gradasi-gelap-biru: linear-gradient(135deg, #02070A 0%, #0297DE 100%);
+  --gradasi-biru-terang: linear-gradient(135deg, #0297DE 0%, #FCFFFF 100%);
   --font-family: "Titillium Web", sans-serif;
 }
 
@@ -20,46 +48,49 @@
   margin: 20px auto;
   width: 100%;
   border-collapse: collapse;
+  background: #FCFFFF;
 }
 .thankyou-table td {
   padding: 10px;
-  border: 1px solid #ddd;
+  border: 1px solid #0297DE;
+  color: #02070A;
 }
 .thankyou-table td:first-child {
   font-weight: bold;
-  background: #f4f4f4;
+  background: rgba(2, 151, 222, 0.15);
 }
 .btn-thankyou {
   display: inline-block;
   margin-top: 10px;
   padding: 10px 20px;
   text-decoration: none;
-  color: #fff;
-  background: #fff;
+  color: #FCFFFF;
+  background: var(--gradasi-gelap-biru);
   border-radius: 5px;
 }
 .btn-thankyou:hover {
-  background: linear-gradient(to right, #198754 50%, #fefefe 150%);
+  background: var(--gradasi-biru-terang);
+  color: #02070A;
 }
 .thankyou {
-  height: 100vh;
-  background: var(--warna-tulisan);
+  min-height: 100vh;
+  height: auto;
+  background: transparent !important;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  color: var(--warna-tulisan2) !important;
+  color: var(--warna-tulisan) !important;
   text-align: center;
 }
 @media (max-width: 426px) {
   .thankyou {
-    height: 150vh;
+    min-height: 100vh;
+    height: auto;
   }
 }
 
 .thankyou .wrapper h1, .thankyou .wrapper p {
-  color: var(--warna-tulisan2);
+  color: var(--warna-tulisan);
 }
 /* THANKYOU END */
 /* THANKYOU END */
@@ -67,36 +98,36 @@
 .btn-regist {
   display: inline-block;
   font-weight: 400;
-  color: var(--warna-tulisan2);
+  color: var(--warna-tulisan);
   text-align: center;
   vertical-align: middle;
   user-select: none;
-  background-color: #fff;
-  border: 1px solid #0d6efd;
+  background: var(--gradasi-gelap-biru);
+  border: 1px solid #FCFFFF;
   padding: 0.5rem 2rem;
   font-size: 1rem;
   line-height: 1.5;
   border-radius: 1rem;
-  transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out,
+  transition: color 0.25s ease-in-out, background 0.25s ease-in-out,
     border-color 0.25s ease-in-out, box-shadow 0.25s ease-in-out,
     font-size 0.25s ease-in-out;
 }
 
 .btn-regist:hover {
-  color: var(--warna-tulisan) !important;
-  background-color: var(--warna-sekunder);
+  color: #02070A !important;
+  background: var(--gradasi-biru-terang);
   font-size: 1.1rem;
 }
 
 .btn-regist-action {
   color: var(--warna-tulisan);
-  background-color: var(--warna-primary);
+  background: var(--gradasi-gelap-biru);
   margin: 5px 0 0 0;
 }
 .btn-regist-action:hover {
   box-shadow: 8px 8px var(--warna-primary);
-  background-color: var(--warna-sekunder);
-  color: var(--warna-tulisan) !important;
+  background: var(--gradasi-biru-terang);
+  color: #02070A !important;
   transition: 0.3s;
   margin-right: 5px;
 }
@@ -104,14 +135,13 @@
 /* HOMEREGIST START */
 /* HOMEREGIST START */
 .homeregist-section {
-  /* padding: 75px 25px 75px 25px  ; */
-  height: 100vh;
-  background-color: var(--warna-primary);
+  min-height: 85vh;
+  height: auto;
+  padding: 130px 25px 80px 25px;
+  background: transparent !important;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-size: cover;
-  background-repeat: no-repeat;
   color: var(--warna-tulisan2) !important;
 }
 
@@ -136,9 +166,7 @@
 
 .registration-section {
   padding: 10rem 25px 75px 25px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-color: var(--warna-primary) !important;
+  background: transparent !important;
   color: var(--warna-tulisan) !important;
 }
 
@@ -243,7 +271,7 @@
 .registration-section .garis-bawah::after {
   position: absolute;
   content: "";
-  background: var(--warna-sekunder);
+  background: var(--gradasi-biru-terang);
   height: 4px;
   width: 50%;
   left: 10%;
@@ -257,7 +285,7 @@
   font-size: 16px;
   border-radius: 5px;
   padding-left: 15px;
-  border: 1px solid var(--warna-sekunder) !important;
+  border: 1px solid var(--warna-primary) !important;
   border-bottom-width: 2px;
   transition: all 0.3s ease;
 }
@@ -299,10 +327,10 @@
 .registration-section form .button input {
   padding: 5px;
   width: 100% !important;
-  background-color: var(--warna-tulisan2);
+  background: var(--gradasi-gelap-biru);
   color: var(--warna-tulisan);
   border-radius: 5px;
-  border: none;
+  border: 1px solid var(--warna-tulisan);
   font-size: 20px;
   font-weight: bold;
   letter-spacing: 1px;
@@ -326,9 +354,10 @@
 }
 
 .registration-section form .button input:hover {
-  background-color: var(--warna-sekunder);
+  background: var(--gradasi-biru-terang);
+  color: #02070A;
   transition: 0.3s;
-  box-shadow: 12px 12px #130101;
+  box-shadow: 12px 12px #02070A;
 }
 .registration-section form .buttonindo input:hover {
   box-shadow: 12px 12px #da0808;
@@ -341,21 +370,18 @@
 @media (max-width: 426px) {
   .registration-section form .user-details .input-box {
     margin-bottom: 15px;
-    width: 200%;
+    width: 100%;
     color: var(--warna-tulisan);
   }
   .registration-section form .category {
-    width: 200%;
+    width: 100%;
   }
   .registration-section .content form .user-details {
-    max-height: 400px;
-    overflow-y: scroll;
-  }
-  .registration-section .user-details::-webkit-scrollbar {
-    width: 5px;
+    max-height: none;
+    overflow-y: visible;
   }
   .registration-section .container .content .con {
-    width: 23rem;
+    width: 100%;
     height: 60px;
   }
 }
@@ -459,16 +485,16 @@
   width: 18px;
   height: 18px;
   margin-right: 12px;
-  accent-color: #0b8be3; /* Use theme color for checkbox */
+  accent-color: #0297DE; /* Use theme color for checkbox */
 }
 
 .terms-agreement label {
   font-size: 0.9rem;
-  color: #374151;
+  color: #02070A;
 }
 
 .terms-agreement a {
-  color: #293e92;
+  color: #0297DE;
   text-decoration: none;
   font-weight: 500;
 }

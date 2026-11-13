@@ -32,7 +32,7 @@ function HomeInter() {
       setShowModal(false);
       window.location.href = redirectLink;
     } else {
-      alert("Please agree to the Terms & Conditions to proceed.");
+      alert("Harap setujui Syarat & Ketentuan untuk melanjutkan.");
     }
   };
 
@@ -44,29 +44,29 @@ function HomeInter() {
           <div className="wrapper">
             <div className="text-center">
               <h1 className="mx-auto">
-                REGISTRATION FORM FOR INTERNATIONAL PARTICIPANTS
+                FORMULIR PENDAFTARAN UNTUK PESERTA INTERNASIONAL
               </h1>
               <h3 className="mx-auto mt-5 mb-2">
-                Choose Categories Competition for Registration ISPC 2026
+                Pilih Kategori Kompetisi untuk Pendaftaran ISPC 2026
               </h3>
             </div>
           </div>
           <div className="link-web mx-auto text-center">
             <a className="btn btn-action text-center me-lg-5" href="#!">
-              Coming Soon <i className="fa-solid fa-earth-americas"></i>
+              Segera Hadir <i className="fa-solid fa-earth-americas"></i>
             </a>
             {/* <a className="btn btn-action text-center me-lg-5" onClick={() =>
               handleOpenModal("/inter-online", internationalOnlineTerms)
             }>
-              Online Competition <i className="fa-solid fa-earth-americas"></i>
+              Kompetisi Online <i className="fa-solid fa-earth-americas"></i>
             </a> */}
             <a className="btn btn-action text-center me-lg-5" href="#!">
-              Coming Soon <i className="fa-solid fa-earth-americas"></i>
+              Segera Hadir <i className="fa-solid fa-earth-americas"></i>
             </a>
             {/* <a className="btn btn-action text-center me-lg-5" onClick={() =>
               handleOpenModal("/inter-offline", internationalOfflineTerms)
             }>
-              Offline Competition{" "}
+              Kompetisi Offline{" "}
               <i className="fa-solid fa-earth-americas"></i>
             </a> */}
           </div>
@@ -78,7 +78,7 @@ function HomeInter() {
         <div className="modal-overlay">
           <div className="modal-content">
             <div className="modal-header">
-              <h2>Terms & Conditions</h2>
+              <h2>Syarat &amp; Ketentuan</h2>
               <button
                 onClick={() => setShowModal(false)}
                 className="modal-close-btn"
@@ -89,8 +89,8 @@ function HomeInter() {
             <div className="modal-body">
               {termsContent}
               <p>
-                Please review the terms and conditions carefully before
-                proceeding.
+                Harap tinjau syarat dan ketentuan dengan saksama sebelum
+                melanjutkan.
               </p>
             </div>
             <div className="modal-footer">
@@ -104,7 +104,7 @@ function HomeInter() {
                   />
                 </div>
                 <label htmlFor="terms">
-                  I have read and agree to the{" "}
+                  Saya telah membaca dan menyetujui{" "}
                   <a
                     href="#"
                     onClick={(e) => {
@@ -112,7 +112,7 @@ function HomeInter() {
                       handleViewTerms();
                     }}
                   >
-                    Terms & Conditions
+                    Syarat &amp; Ketentuan
                   </a>
                   .
                 </label>
@@ -122,14 +122,14 @@ function HomeInter() {
                   className="btn btn-secondary"
                   onClick={() => setShowModal(false)}
                 >
-                  Cancel
+                  Batal
                 </button>
                 <button
                   className="btn btn-primary"
                   onClick={handleAccept}
                   disabled={!termsAccepted}
                 >
-                  Accept & Proceed
+                  Setuju &amp; Lanjutkan
                 </button>
               </div>
             </div>

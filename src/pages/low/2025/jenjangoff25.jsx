@@ -7,29 +7,29 @@ function Jenjangoff25() {
       <Navigation />
       {/* PAGE HEADER START */}
       <div className="page-header text-center">
-        <h1>List of Winners 2025</h1>
-        <a href="/lowtahun">Previous Page</a>
+        <h1>Daftar Pemenang 2025</h1>
+        <a href="/lowtahun">Halaman Sebelumnya</a>
       </div>
       {/* PAGE HEADER END */}
       <section className="low-section">
         <div className="text-center">
           <div className="content-title">
             <h1>
-              Choose based on the Category of the event you are participating in
+              Pilih berdasarkan jenjang acara yang Anda ikuti
             </h1>
           </div>
           <div className="content-button mt-4">
             <a href="https://drive.google.com/file/d/1G2CPkCbjWVGf5U0aJv1tfyJsEnsnMy8n/view?usp=sharing" target="_blank" className="btn btn-action btn-lg">
-              University
+              Universitas
             </a>
             <a href="https://drive.google.com/file/d/11EG8AzoovsJRpO0K0Lz54769caGsYgsD/view?usp=sharing" target="_blank" className="btn btn-action btn-lg">
-              Senior High School
+              SMA / Sederajat
             </a>
             <a href="https://drive.google.com/file/d/1LErcbREOsuIUQ91wx4mHA0ICON5AX3Jx/view?usp=sharing" target="_blank" className="btn btn-action btn-lg">
-              Junior High School
+              SMP / Sederajat
             </a>
             <a href="https://drive.google.com/file/d/1GgXMlPJ0ie14N04RzYbrQ8-kjhhVcsVv/view?usp=sharing" target="_blank" className="btn btn-action btn-lg">
-              Elementary
+              SD / Sederajat
             </a>
           </div>
         </div>

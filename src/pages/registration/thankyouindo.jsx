@@ -5,10 +5,10 @@ function ThankYouIndo() {
   const location = useLocation();
   const searchParams = new URLSearchParams(location.search);
 
-  const fullName = searchParams.get("namaLengkap") || "No data available";
-  const projectTitle = searchParams.get("projectTitle") || "No data available";
-  const category = searchParams.get("category") || "No data available";
-  const schoolName = searchParams.get("namasekolah") || "No data available";
+  const fullName = searchParams.get("namaLengkap") || "Data tidak tersedia";
+  const projectTitle = searchParams.get("projectTitle") || "Data tidak tersedia";
+  const category = searchParams.get("category") || "Data tidak tersedia";
+  const schoolName = searchParams.get("namasekolah") || "Data tidak tersedia";
 
   return (
     <section className="thankyou">
