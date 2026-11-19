@@ -8,6 +8,7 @@ import BackToTop from "../components/backtotop";
 
 import Timevenue from "../components/timevenue";
 import Aftermovie from "../components/aftermovie";
+import Ajakan from "../components/ajakan";
 
 // Content
 // import MainHero from "../components/mainhero";
@@ -26,6 +27,7 @@ function Home() {
         {/* <Timevenue /> */}
         <Categories />
         <Aftermovie />
+        <Ajakan />
         <BackToTop />
         <Footer />
     </>

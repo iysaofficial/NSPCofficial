@@ -1,43 +1,55 @@
+const POIN = [
+  {
+    ikon: "fas fa-seedling",
+    judul: "Menumbuhkan minat sains",
+    teks: "Menumbuhkan minat dan motivasi di bidang sains di kalangan generasi muda.",
+  },
+  {
+    ikon: "fas fa-chalkboard-teacher",
+    judul: "Pendidikan sains yang lebih baik",
+    teks: "Mendorong pelajar lebih termotivasi mempelajari sains dan mengembangkan potensinya.",
+  },
+  {
+    ikon: "fas fa-handshake",
+    judul: "Kolaborasi dan bertukar ide",
+    teks: "Mempertemukan peserta dari berbagai daerah untuk bertukar ide serta pengalaman.",
+  },
+];
+
 function About() {
   return (
-    <>
-      <section id="about" className="about-section ">
-        <div className="container row mx-auto">
-          <h1 className="text-center mb-3">Tentang NSPC</h1>
-          <div className="content-img col-lg-6 col-12 text-center">
-            <img
-              src="./assets/logo/NSPC LOGO.png"
-              className="img-fluid"
-              alt=""
-            />
-          </div>
-          <div className="content-text col-lg-6 col-12">
-            <p className="mb-2">
-              National Science Project Competition (NSPC) adalah kompetisi sains
-              internasional yang diselenggarakan oleh Indonesian Young Scientist
-              Association (IYSA). Kompetisi ini bertujuan untuk menumbuhkan
-              minat dan motivasi di bidang sains di kalangan generasi muda di
-              seluruh dunia.
-            </p>
-            {/* <p className="mb-2">
-                        National Science Project Competition (NSPC) adalah kompetisi sains internasional yang diselenggarakan melalui kolaborasi antara Indonesian Young Scientist Association (IYSA) dan Universitas Muhammadiyah Malang (UMM). Kompetisi ini bertujuan untuk menumbuhkan minat dan motivasi di bidang sains di kalangan generasi muda di seluruh dunia.
-                    </p> */}
-            <p className="mb-2">
-              NSPC diharapkan dapat berkontribusi dalam meningkatkan kualitas
-              pendidikan sains di Indonesia maupun secara global. Kompetisi ini
-              akan mendorong para pelajar untuk lebih termotivasi dalam
-              mempelajari sains dan mengembangkan potensi mereka.
-            </p>
-            <p className="mb-2">
-              NSPC juga bertujuan untuk memperkuat kolaborasi internasional di
-              bidang sains. Kompetisi ini akan mempertemukan para pelajar dari
-              berbagai negara dan memberikan mereka kesempatan untuk bertukar
-              ide serta pengalaman.
-            </p>
-          </div>
+    <section id="about" className="seksi seksi-lembut tentang">
+      <div className="wadah kisi">
+        <div className="teks">
+          <span className="alis">Tentang NSPC</span>
+          <h2>Kompetisi proyek sains untuk generasi peneliti berikutnya</h2>
+          <p>
+            National Science Project Competition (NSPC) adalah kompetisi sains
+            yang diselenggarakan oleh Indonesian Young Scientist Association
+            (IYSA). Kompetisi ini bertujuan untuk menumbuhkan minat dan motivasi
+            di bidang sains di kalangan generasi muda.
+          </p>
+          <p>
+            NSPC diharapkan dapat berkontribusi dalam meningkatkan kualitas
+            pendidikan sains di Indonesia maupun secara global, sekaligus
+            memperkuat kolaborasi di bidang sains.
+          </p>
         </div>
-      </section>
-    </>
+        <div className="poin">
+          {POIN.map((p) => (
+            <div className="kartu-poin" key={p.judul}>
+              <span className="ikon">
+                <i className={p.ikon} aria-hidden="true" />
+              </span>
+              <div>
+                <h3>{p.judul}</h3>
+                <p>{p.teks}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
   );
 }
 

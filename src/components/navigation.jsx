@@ -1,190 +1,183 @@
-import NavDropdown from "react-bootstrap/NavDropdown";
+/* eslint-disable react/prop-types */
+import { useEffect, useRef, useState } from "react";
 
-// Import CSS
+// Import CSS — styles.css (gaya lama) lalu nspc-ui.css (tampilan baru) yang menimpanya.
 import "../assets/css/styles.css";
+import "../assets/css/nspc-ui.css";
 
-const navigation = () => {
-  const handleAboutClick = (e) => {
-    e.preventDefault();
+/*
+ * Isi menu. Tautan edisi lama sengaja dibiarkan sebagai komentar seperti
+ * sebelumnya — aktifkan kembali dengan memindahkannya ke `isi`.
+ *
+ * Buku Panduan 2026: https://drive.google.com/file/d/1Hfm8rpV7fx4ZGi_O0ByZ2H1M52vAxasx/view?usp=sharing
+ * Buku Panduan 2025: https://drive.google.com/file/d/1wpmmubMDQP_wQ9XJuxe0ppAvHY3ESObY/view?usp=sharing
+ * Buku Panduan 2024: https://drive.google.com/file/d/1STnLOXA-9nVlKTTcp9WZ-mY3bjoWDbVA/view?usp=sharing
+ * Sertifikat Pembimbing 2026: /cert2026
+ * Sertifikat Pembimbing 2025: https://drive.google.com/drive/folders/1168Gqp_t-une_HfMMhlB8A4tvlbcdxwZ?usp=sharing
+ * Sertifikat Pembimbing 2024: https://drive.google.com/drive/folders/1OdGfiXdOXx2UTBY4GflTv9rcH8CO6F0q?usp=sharing
+ * Galeri 2026: https://drive.google.com/drive/folders/12VSzP_kKDEKMGqZf8J5TOTmPFc4pMv6i?usp=sharing
+ * Galeri 2025: https://drive.google.com/drive/folders/1hGC7x3E8gU_achrZ-J0u52uSR2G5R5BL?usp=sharing
+ * Galeri 2024: https://drive.google.com/drive/folders/14Niucp6WAqmeQqTFTdt5A3NW98jsafKz?usp=sharing
+ * Siaran Pers 2026: https://drive.google.com/file/d/1bsNac2XmMuUgIoC79u0N8cBlOUuz-2r5/view?usp=sharing
+ * Siaran Pers 2025: https://drive.google.com/file/d/115ioYB9Yi-oLTRBO2GysgJIoxS_mgI5u/view?usp=sharing
+ * Siaran Pers 2024: https://drive.google.com/file/d/1SXsbmmALUxxsOeSF_dyqSBxIxivy2Th8/view?usp=sharing
+ * Kurasi 2025: https://drive.google.com/drive/folders/1-3IagOtB_ebgDPgR05Agt3v1ogYUa9Xm?usp=sharing
+ * Kurasi 2024: https://drive.google.com/drive/folders/1wKdfpoiYnZFSHBtfCtPtdosKWrD0xVaD?usp=drive_link
+ */
+const MENU = [
+  { label: "Beranda", href: "/" },
+  {
+    label: "Buku Panduan",
+    isi: [{ label: "Buku Panduan 2027", href: "#", catatan: "Segera" }],
+  },
+  { label: "Daftar Pemenang", href: "/lowtahun" },
+  {
+    label: "Sertifikat",
+    isi: [{ label: "Sertifikat Pembimbing 2027", href: "#", catatan: "Segera" }],
+  },
+  {
+    label: "Galeri",
+    isi: [{ label: "Galeri 2027", href: "#", catatan: "Segera" }],
+  },
+  {
+    label: "Media",
+    isi: [{ label: "Berita dari Media", href: "#", catatan: "Segera" }],
+  },
+  {
+    label: "Kurasi",
+    isi: [
+      {
+        label: "Kurasi 2027",
+        href: "https://drive.google.com/drive/folders/1B9L97RoyZlqLXIm_Arsq-m0eDatwI6l-?usp=sharing",
+        luar: true,
+      },
+    ],
+  },
+  { label: "Kontak", href: "/contact" },
+  { label: "FAQ", href: "/faq" },
+];
 
-    // Mendapatkan id dari href
-    const targetId = e.target.getAttribute("href").substring(1);
-
-    // Mendapatkan elemen dengan id "about"
-    const targetElement = document.getElementById(targetId);
-
-    // Scroll ke elemen tersebut
-    if (targetElement) {
-      targetElement.scrollIntoView({ behavior: "smooth" });
-    }
-  };
+function Tautan({ item, className, onClick }) {
+  const luar = item.luar ? { target: "_blank", rel: "noreferrer" } : {};
   return (
-    // Navbar
-    <section>
-      <nav className="navbar navbar-expand-lg navbar-light bg-dark fixed-top">
-        <div className="container">
-          <img src="./assets/logo/NSPC LOGO.png" width="100" />
-          <button
-            className="navbar-toggler"
-            type="button"
-            data-toggle="collapse"
-            data-target="#navbarNavAltMarkup"
-            aria-controls="navbarNavAltMarkup"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span className="navbar-toggler-icon"></span>
-          </button>
-          <div
-            className="collapse navbar-collapse justify-content-center"
-            id="navbarNavAltMarkup"
-          >
-            <div className="navbar-nav">
-              <a className="nav-item nav-link" href="/">
-                Beranda
-              </a>
-              <NavDropdown title="Buku Panduan" id="nav-dropdown">
-                <NavDropdown.Item eventKey="5.1" href="#">
-                  2027
-                </NavDropdown.Item>
-                {/* <NavDropdown.Item
-                  eventKey="5.1"
-                  href="https://drive.google.com/file/d/1Hfm8rpV7fx4ZGi_O0ByZ2H1M52vAxasx/view?usp=sharing"
-                >
-                  2026
-                </NavDropdown.Item>
-                <NavDropdown.Item
-                  eventKey="5.2"
-                  href="https://drive.google.com/file/d/1wpmmubMDQP_wQ9XJuxe0ppAvHY3ESObY/view?usp=sharing"
-                >
-                  2025
-                </NavDropdown.Item>
-                <NavDropdown.Item
-                  eventKey="5.3"
-                  href="https://drive.google.com/file/d/1STnLOXA-9nVlKTTcp9WZ-mY3bjoWDbVA/view?usp=sharing"
-                >
-                  2024
-                </NavDropdown.Item> */}
-              </NavDropdown>
-              <a className="nav-item nav-link" href="/lowtahun">
-                Daftar Pemenang
-              </a>
-              <NavDropdown title="Sertifikat" id="nav-dropdown">
-                <NavDropdown.Item eventKey="2.1" href="#">
-                  Sertifikat Pembimbing 2027
-                </NavDropdown.Item>
-                {/* <NavDropdown.Item eventKey="2.1" href="/cert2026">
-                  Sertifikat Pembimbing 2026
-                </NavDropdown.Item>
-                <NavDropdown.Item
-                  eventKey="2.1"
-                  href="https://drive.google.com/drive/folders/1168Gqp_t-une_HfMMhlB8A4tvlbcdxwZ?usp=sharing"
-                  target="_blank"
-                >
-                  Sertifikat Pembimbing 2025
-                </NavDropdown.Item>
-                <NavDropdown.Item
-                  eventKey="2.1"
-                  href="https://drive.google.com/drive/folders/1OdGfiXdOXx2UTBY4GflTv9rcH8CO6F0q?usp=sharing"
-                  target="_blank"
-                >
-                  Sertifikat Pembimbing 2024
-                </NavDropdown.Item> */}
-              </NavDropdown>
-              <NavDropdown title="Galeri" id="nav-dropdown">
-                <NavDropdown.Item eventKey="3.1" href="#" target="_blank">
-                  2027
-                </NavDropdown.Item>
-                {/* <NavDropdown.Item
-                  eventKey="3.1"
-                  href="https://drive.google.com/drive/folders/12VSzP_kKDEKMGqZf8J5TOTmPFc4pMv6i?usp=sharing"
-                  target="_blank"
-                >
-                  2026
-                </NavDropdown.Item>
-                <NavDropdown.Item
-                  eventKey="3.1"
-                  href="https://drive.google.com/drive/folders/1hGC7x3E8gU_achrZ-J0u52uSR2G5R5BL?usp=sharing"
-                  target="_blank"
-                >
-                  2025
-                </NavDropdown.Item>
-                <NavDropdown.Item
-                  eventKey="3.1"
-                  href="https://drive.google.com/drive/folders/14Niucp6WAqmeQqTFTdt5A3NW98jsafKz?usp=sharing"
-                  target="_blank"
-                >
-                  2024
-                </NavDropdown.Item> */}
-              </NavDropdown>
-              <NavDropdown title="Media" id="nav-dropdown">
-                <NavDropdown.Item eventKey="4.1" href="#">
-                  Berita dari Media
-                </NavDropdown.Item>
-                {/* <NavDropdown.Item
-                  eventKey="4.1"
-                  href="https://drive.google.com/file/d/1bsNac2XmMuUgIoC79u0N8cBlOUuz-2r5/view?usp=sharing"
-                  target="_blank"
-                >
-                  Siaran Pers 2026
-                </NavDropdown.Item>
-                <NavDropdown.Item
-                  eventKey="4.1"
-                  href="https://drive.google.com/file/d/115ioYB9Yi-oLTRBO2GysgJIoxS_mgI5u/view?usp=sharing"
-                  target="_blank"
-                >
-                  Siaran Pers 2025
-                </NavDropdown.Item>
-                <NavDropdown.Item
-                  eventKey="4.1"
-                  href="https://drive.google.com/file/d/1SXsbmmALUxxsOeSF_dyqSBxIxivy2Th8/view?usp=sharing"
-                  target="_blank"
-                >
-                  Siaran Pers 2024
-                </NavDropdown.Item> */}
-              </NavDropdown>
-              <NavDropdown title="Kurasi" id="nav-dropdown">
-                <NavDropdown.Item
-                  eventKey="4.2"
-                  href="https://drive.google.com/drive/folders/1B9L97RoyZlqLXIm_Arsq-m0eDatwI6l-?usp=sharing"
-                  target="_blank"
-                >
-                  Kurasi 2027
-                </NavDropdown.Item>
-                {/* <NavDropdown.Item
-                  eventKey="4.2"
-                  href="https://drive.google.com/drive/folders/1B9L97RoyZlqLXIm_Arsq-m0eDatwI6l-?usp=sharing"
-                  target="_blank"
-                >
-                  Kurasi 2026
-                </NavDropdown.Item>
-                <NavDropdown.Item
-                  eventKey="4.2"
-                  href="https://drive.google.com/drive/folders/1-3IagOtB_ebgDPgR05Agt3v1ogYUa9Xm?usp=sharing"
-                  target="_blank"
-                >
-                  Kurasi 2025
-                </NavDropdown.Item>
-                <NavDropdown.Item
-                  eventKey="4.1"
-                  href="https://drive.google.com/drive/folders/1wKdfpoiYnZFSHBtfCtPtdosKWrD0xVaD?usp=drive_link"
-                  target="_blank"
-                >
-                  Kurasi 2024
-                </NavDropdown.Item> */}
-              </NavDropdown>
-              <a className="nav-item nav-link" href="/contact">
-                Kontak{" "}
-              </a>
-              <a className="nav-item nav-link" href="/faq">
-                FAQ{" "}
-              </a>
-            </div>
+    <a href={item.href} className={className} onClick={onClick} {...luar}>
+      <span>{item.label}</span>
+      {item.catatan && <span className="catatan">{item.catatan}</span>}
+      {item.luar && <i className="fas fa-external-link-alt" aria-hidden="true" style={{ fontSize: 11 }} />}
+    </a>
+  );
+}
+
+const Navigation = () => {
+  const [tergulir, setTergulir] = useState(false);
+  const [terbuka, setTerbuka] = useState(false);
+  const [turun, setTurun] = useState(null);
+  const navRef = useRef(null);
+  const jalur = typeof window !== "undefined" ? window.location.pathname : "/";
+
+  useEffect(() => {
+    const cek = () => setTergulir(window.scrollY > 12);
+    cek();
+    window.addEventListener("scroll", cek, { passive: true });
+    return () => window.removeEventListener("scroll", cek);
+  }, []);
+
+  // Tutup menu turun saat klik di luar navigasi atau menekan Esc.
+  useEffect(() => {
+    const luar = (e) => {
+      if (navRef.current && !navRef.current.contains(e.target)) setTurun(null);
+    };
+    const esc = (e) => {
+      if (e.key === "Escape") {
+        setTurun(null);
+        setTerbuka(false);
+      }
+    };
+    document.addEventListener("click", luar);
+    document.addEventListener("keydown", esc);
+    return () => {
+      document.removeEventListener("click", luar);
+      document.removeEventListener("keydown", esc);
+    };
+  }, []);
+
+  const tutupSemua = () => {
+    setTurun(null);
+    setTerbuka(false);
+  };
+
+  return (
+    <header
+      ref={navRef}
+      className={`nav-nspc${tergulir ? " tergulir" : ""}${terbuka ? " terbuka" : ""}`}
+    >
+      <div className="wadah baris">
+        <a href="/" className="merek" aria-label="NSPC — Beranda">
+          <img src="/assets/logo/NSPC LOGO.png" alt="NSPC" />
+        </a>
+
+        <nav className="menu-wadah" aria-label="Navigasi utama">
+          <ul className="menu">
+            {MENU.map((m) =>
+              m.isi ? (
+                <li key={m.label}>
+                  <button
+                    type="button"
+                    className="pemicu"
+                    aria-expanded={turun === m.label}
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      setTurun(turun === m.label ? null : m.label);
+                    }}
+                  >
+                    {m.label}
+                    <i className="fas fa-chevron-down panah" aria-hidden="true" />
+                  </button>
+                  {turun === m.label && (
+                    <ul className="turun">
+                      {m.isi.map((s) => (
+                        <li key={s.label}>
+                          <Tautan item={s} onClick={tutupSemua} />
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </li>
+              ) : (
+                <li key={m.label}>
+                  <Tautan
+                    item={m}
+                    className={jalur === m.href ? "aktif" : undefined}
+                    onClick={tutupSemua}
+                  />
+                </li>
+              ),
+            )}
+          </ul>
+          <div className="aksi-ponsel">
+            <a href="/homeregist" className="tbl tbl-utama">
+              Pendaftaran <i className="fas fa-arrow-right" aria-hidden="true" />
+            </a>
           </div>
+        </nav>
+
+        <div className="aksi">
+          <a href="/homeregist" className="tbl tbl-utama">
+            Pendaftaran <i className="fas fa-arrow-right" aria-hidden="true" />
+          </a>
+          <button
+            type="button"
+            className="burger"
+            aria-label={terbuka ? "Tutup menu" : "Buka menu"}
+            aria-expanded={terbuka}
+            onClick={() => setTerbuka(!terbuka)}
+          >
+            <i className={terbuka ? "fas fa-times" : "fas fa-bars"} aria-hidden="true" />
+          </button>
         </div>
-      </nav>
-    </section>
+      </div>
+    </header>
   );
 };
 
-export default navigation;
+export default Navigation;
