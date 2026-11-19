@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, RouterProvider, Navigate } from "react-router-dom";
 import Home from "./pages";
 import FAQ from "./pages/faq";
 import ContactPage from "./pages/contactpages";
@@ -13,12 +13,6 @@ import Jenjangoff25 from "./pages/low/2025/jenjangoff25";
 import Jenjangonl26 from "./pages/low/2026/jenjangonl26";
 import Jenjangoff26 from "./pages/low/2026/jenjangoff26";
 import HomeRegist from "./pages/registration/homeregist";
-import HomeIndo from "./pages/registration/homeindo";
-import HomeInter from "./pages/registration/homeinter";
-import IndonesiaOffline from "./pages/registration/indo-offline";
-import IndonesiaOnline from "./pages/registration/indo-online";
-import InternationalOffline from "./pages/registration/inter-offline";
-import InternationalOnline from "./pages/registration/inter-online";
 import Thankyouinter from "./pages/registration/thankyouinter";
 // import ContactPage from "./pages/contactpages";
 // import Faq from "./pages/faq";
@@ -26,6 +20,11 @@ import Thankyouinter from "./pages/registration/thankyouinter";
 import ListNews from "./pages/news/listnews";
 import Cert2026 from "./pages/certificate/cert2026";
 
+/*
+ * Formulir lama (Google Apps Script) /homeindo, /homeinter, /indo-*, /inter-*
+ * dialihkan ke /homeregist: pendaftaran kini lewat formulir dasbor IYSA.
+ * Berkas halamannya tetap ada di src/pages/registration bila perlu dirujuk.
+ */
 const router = createBrowserRouter([
   {
     path: "/",
@@ -81,27 +80,27 @@ const router = createBrowserRouter([
   },
   {
     path: "/homeindo",
-    element: <HomeIndo />
+    element: <Navigate to="/homeregist" replace />
   },
   {
     path: "/homeinter",
-    element: <HomeInter />
+    element: <Navigate to="/homeregist" replace />
   },
   {
     path: "/indo-offline",
-    element: <IndonesiaOffline />
+    element: <Navigate to="/homeregist" replace />
   },
   {
     path: "/indo-online",
-    element: <IndonesiaOnline />
+    element: <Navigate to="/homeregist" replace />
   },
   {
     path: "/inter-offline",
-    element: <InternationalOffline />
+    element: <Navigate to="/homeregist" replace />
   },
   {
     path: "/inter-online",
-    element: <InternationalOnline />
+    element: <Navigate to="/homeregist" replace />
   },
   {
     path: "/thankyouinter",

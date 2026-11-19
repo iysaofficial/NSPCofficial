@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 // Import CSS — styles.css (gaya lama) lalu nspc-ui.css (tampilan baru) yang menimpanya.
 import "../assets/css/styles.css";
 import "../assets/css/nspc-ui.css";
+import { usePendaftaran, SERI } from "../lib/pendaftaran";
 
 /*
  * Isi menu. Tautan edisi lama sengaja dibiarkan sebagai komentar seperti
@@ -23,44 +24,66 @@ import "../assets/css/nspc-ui.css";
  * Siaran Pers 2024: https://drive.google.com/file/d/1SXsbmmALUxxsOeSF_dyqSBxIxivy2Th8/view?usp=sharing
  * Kurasi 2025: https://drive.google.com/drive/folders/1-3IagOtB_ebgDPgR05Agt3v1ogYUa9Xm?usp=sharing
  * Kurasi 2024: https://drive.google.com/drive/folders/1wKdfpoiYnZFSHBtfCtPtdosKWrD0xVaD?usp=drive_link
+ *
+ * Item tanpa `href` tampil nonaktif dengan catatan "Segera". "Kurasi 2027"
+ * dulu menaut folder Drive milik ISPC (sisa templat), jadi kini nonaktif.
+ * Buku Panduan diisi dari dasbor (lihat `menuPanduan`).
  */
 const MENU = [
   { label: "Beranda", href: "/" },
-  {
-    label: "Buku Panduan",
-    isi: [{ label: "Buku Panduan 2027", href: "#", catatan: "Segera" }],
-  },
+  { label: "Buku Panduan", isi: "panduan" },
   { label: "Daftar Pemenang", href: "/lowtahun" },
   {
     label: "Sertifikat",
-    isi: [{ label: "Sertifikat Pembimbing 2027", href: "#", catatan: "Segera" }],
+    isi: [{ label: "Sertifikat Pembimbing 2027", catatan: "Segera" }],
   },
   {
     label: "Galeri",
-    isi: [{ label: "Galeri 2027", href: "#", catatan: "Segera" }],
+    isi: [{ label: "Galeri 2027", catatan: "Segera" }],
   },
   {
     label: "Media",
-    isi: [{ label: "Berita dari Media", href: "#", catatan: "Segera" }],
+    isi: [{ label: "Berita dari Media", catatan: "Segera" }],
   },
   {
     label: "Kurasi",
-    isi: [
-      {
-        label: "Kurasi 2027",
-        href: "https://drive.google.com/drive/folders/1B9L97RoyZlqLXIm_Arsq-m0eDatwI6l-?usp=sharing",
-        luar: true,
-      },
-    ],
+    isi: [{ label: "Kurasi 2027", catatan: "Segera" }],
   },
   { label: "Kontak", href: "/contact" },
   { label: "FAQ", href: "/faq" },
 ];
 
+/*
+ * Buku Panduan mengikuti dasbor, seperti situs invensi lain: guidebook baru
+ * muncul setelah DITERBITKAN dari dasbor dan membuka modal panduan IYSA
+ * (embed/panduan.js); Syarat & Ketentuan ikut tampil begitu edisinya di-pin.
+ */
+function menuPanduan(identitas, guidebook) {
+  const isi = [];
+  if (guidebook) {
+    isi.push({ label: `Buku Panduan ${identitas?.tahun ?? ""}`.trim(), href: guidebook.url, luar: true, panduan: "guidebook" });
+  } else {
+    isi.push({ label: `Buku Panduan ${identitas?.tahun ?? "2027"}`, catatan: "Segera" });
+  }
+  if (identitas) isi.push({ label: "Syarat & Ketentuan", href: "#syarat-ketentuan", panduan: "tnc" });
+  return isi;
+}
+
 function Tautan({ item, className, onClick }) {
+  if (!item.href) {
+    return (
+      <span className={`nonaktif${className ? ` ${className}` : ""}`} aria-disabled="true">
+        <span>{item.label}</span>
+        {item.catatan && <span className="catatan">{item.catatan}</span>}
+      </span>
+    );
+  }
   const luar = item.luar ? { target: "_blank", rel: "noreferrer" } : {};
+  const panduan = item.panduan
+    ? { "data-iysa-panduan": SERI, ...(item.panduan === "tnc" ? { "data-iysa-panduan-jenis": "tnc" } : {}) }
+    : {};
   return (
-    <a href={item.href} className={className} onClick={onClick} {...luar}>
+    <a href={item.href} className={className} onClick={onClick} {...luar} {...panduan}>
       <span>{item.label}</span>
       {item.catatan && <span className="catatan">{item.catatan}</span>}
       {item.luar && <i className="fas fa-external-link-alt" aria-hidden="true" style={{ fontSize: 11 }} />}
@@ -73,6 +96,19 @@ const Navigation = () => {
   const [terbuka, setTerbuka] = useState(false);
   const [turun, setTurun] = useState(null);
   const navRef = useRef(null);
+  const { memuat, identitas, keadaan, guidebook } = usePendaftaran();
+  const isiPanduan = menuPanduan(identitas, guidebook);
+  /* Pendaftaran mengikuti togel dasbor; selama tertutup tombolnya nonaktif. */
+  const tombolDaftar =
+    keadaan === "buka" ? (
+      <a href="/homeregist" className="tbl tbl-utama">
+        Daftar Sekarang <i className="fas fa-arrow-right" aria-hidden="true" />
+      </a>
+    ) : (
+      <span className="tbl tbl-utama" aria-disabled="true" title="Pendaftaran belum dibuka">
+        {memuat ? "Pendaftaran" : "Pendaftaran Segera Dibuka"}
+      </span>
+    );
   const jalur = typeof window !== "undefined" ? window.location.pathname : "/";
 
   useEffect(() => {
@@ -135,7 +171,7 @@ const Navigation = () => {
                   </button>
                   {turun === m.label && (
                     <ul className="turun">
-                      {m.isi.map((s) => (
+                      {(m.isi === "panduan" ? isiPanduan : m.isi).map((s) => (
                         <li key={s.label}>
                           <Tautan item={s} onClick={tutupSemua} />
                         </li>
@@ -155,16 +191,12 @@ const Navigation = () => {
             )}
           </ul>
           <div className="aksi-ponsel">
-            <a href="/homeregist" className="tbl tbl-utama">
-              Pendaftaran <i className="fas fa-arrow-right" aria-hidden="true" />
-            </a>
+            {tombolDaftar}
           </div>
         </nav>
 
         <div className="aksi">
-          <a href="/homeregist" className="tbl tbl-utama">
-            Pendaftaran <i className="fas fa-arrow-right" aria-hidden="true" />
-          </a>
+          {tombolDaftar}
           <button
             type="button"
             className="burger"

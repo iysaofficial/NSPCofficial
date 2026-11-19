@@ -954,3 +954,34 @@ html {
 
 /* Judul memakai huruf baru (styles.css memaksa huruf lama pada h1). */
 h1, h2, h3, h4, h5, .hero-nspc h1 { font-family: var(--huruf) !important; }
+
+/* Tombol dan item menu nonaktif (pendaftaran belum dibuka, menu "Segera"). */
+.tbl[aria-disabled="true"] { opacity: 0.55; cursor: not-allowed; box-shadow: none; }
+.tbl[aria-disabled="true"]:hover { transform: none; }
+.tbl-utama[aria-disabled="true"]:hover { background: var(--biru); }
+.tbl-terang[aria-disabled="true"]:hover { background: var(--putih); }
+.nav-nspc .menu .nonaktif {
+  display: flex; justify-content: space-between; align-items: center; gap: 10px;
+  width: 100%; padding: 10px 12px; border-radius: 8px;
+  font-size: 14px; font-weight: 600; color: rgba(2, 7, 10, 0.45); cursor: not-allowed;
+}
+@media (max-width: 1100px) { .nav-nspc .menu .nonaktif { color: rgba(252, 255, 255, 0.5); } }
+
+/* Halaman pendaftaran */
+.daftar-nspc { padding: 150px 0 96px; color: var(--putih); }
+.daftar-nspc .kepala-seksi h1 { font-size: clamp(34px, 5vw, 56px); font-weight: 800; margin: 0 0 14px; color: var(--putih); }
+.daftar-nspc .kotak-info {
+  max-width: 640px; margin: 0 auto; padding: 32px; text-align: center;
+  border-radius: var(--radius); background: rgba(2, 7, 10, 0.72);
+  border: 1px solid var(--putih-14); backdrop-filter: blur(8px);
+}
+.daftar-nspc .kotak-info i.besar {
+  width: 64px; height: 64px; border-radius: 18px; display: inline-grid; place-items: center;
+  font-size: 26px; background: var(--biru-20); color: var(--sian); margin-bottom: 18px;
+}
+.daftar-nspc .kotak-info p { color: var(--putih-70) !important; font-size: 16px !important; line-height: 1.7 !important; margin: 0 0 22px !important; text-align: center !important; }
+.daftar-nspc .kotak-info .tombol { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+.daftar-nspc .formulir {
+  max-width: 46rem; margin: 0 auto; padding: 8px; border-radius: var(--radius);
+  background: var(--putih); color: var(--tinta); text-align: left;
+}

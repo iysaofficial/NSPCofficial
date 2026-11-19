@@ -6,8 +6,8 @@ function Ajakan() {
           <div>
             <h2>Siap ikut NSPC 2027?</h2>
             <p>
-              Pendaftaran segera dibuka. Siapkan proyekmu sekarang, dan hubungi
-              kami bila ada yang ingin ditanyakan.
+              Siapkan proyekmu sekarang. Pendaftaran dan buku panduan diumumkan
+              di situs ini; hubungi kami bila ada yang ingin ditanyakan.
             </p>
           </div>
           <div className="tombol">

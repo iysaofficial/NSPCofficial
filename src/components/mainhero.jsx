@@ -1,11 +1,38 @@
+import { usePendaftaran, formatTanggal, SERI } from "../lib/pendaftaran";
+
 /*
  * Hero beranda. Latar aurora tetap dari body (styles.css); isi disusun
  * dua kolom: ajakan di kiri, kartu logo di kanan, fakta singkat di bawah.
  *
- * Saat pendaftaran 2027 dibuka: ganti label pil, judul, dan tombol utama
- * (href="/homeregist", buang aria-disabled).
+ * Judul dan tombol mengikuti togel pendaftaran di dasbor IYSA (edisi yang
+ * di-pin); guidebook tampil hanya bila sudah diterbitkan dari dasbor.
  */
 function MainHero() {
+  const { memuat, identitas, keadaan, guidebook } = usePendaftaran();
+  const tahun = identitas?.tahun ?? "2027";
+
+  let tombol;
+  if (keadaan === "buka") {
+    tombol = (
+      <a className="tbl tbl-terang" href="/homeregist">
+        Daftar Sekarang <i className="fas fa-arrow-right" aria-hidden="true" />
+      </a>
+    );
+  } else {
+    const teks = memuat
+      ? "Memuat…"
+      : keadaan === "belum" && identitas?.pendaftaran_buka
+        ? `Pendaftaran dibuka ${formatTanggal(identitas.pendaftaran_buka)}`
+        : keadaan === "tutup" && identitas
+          ? "Pendaftaran ditutup"
+          : "Pendaftaran Segera Dibuka";
+    tombol = (
+      <span className="tbl tbl-terang" aria-disabled="true">
+        <i className="fas fa-hourglass-half" aria-hidden="true" /> {teks}
+      </span>
+    );
+  }
+
   return (
     <section className="hero-nspc" id="beranda">
       <div className="wadah">
@@ -16,8 +43,8 @@ function MainHero() {
               National Science Project Competition
             </span>
             <h1>
-              Segera Hadir
-              <span className="sorot">NSPC 2027</span>
+              {keadaan === "buka" ? "Pendaftaran Dibuka" : "Segera Hadir"}
+              <span className="sorot">NSPC {tahun}</span>
             </h1>
             <p className="pengantar">
               Panggung bagi para inovator, peneliti, dan pemikir muda, serta
@@ -25,10 +52,12 @@ function MainHero() {
               Anda, raih pengakuan, dan berkontribusilah bagi masa depan sains.
             </p>
             <div className="tombol">
-              <a className="tbl tbl-terang" href="/homeregist" aria-disabled="true">
-                <i className="fas fa-hourglass-half" aria-hidden="true" />
-                Pendaftaran Segera Dibuka
-              </a>
+              {tombol}
+              {guidebook && (
+                <a className="tbl tbl-garis" href={guidebook.url} target="_blank" rel="noreferrer" data-iysa-panduan={SERI}>
+                  <i className="fas fa-book-open" aria-hidden="true" /> Buku Panduan
+                </a>
+              )}
               <a className="tbl tbl-garis" href="#kategori">
                 Lihat Kategori <i className="fas fa-arrow-down" aria-hidden="true" />
               </a>
